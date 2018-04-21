@@ -13,16 +13,20 @@ public class Rotator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.touchCount > 0)
+        foreach (Touch touch in Input.touches)
         {
-            Touch touch = Input.GetTouch(0);
             if (touch.phase == UnityEngine.TouchPhase.Began)
             {
-                velocity *= -1;
+                Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit) == true)
+                {
+                    velocity *= -1;
+                }
             }
-
-            transform.localEulerAngles = new Vector3(angle / 2.0f, angle, 0);
-            angle += velocity * Time.deltaTime;
         }
-	}
+
+        transform.localEulerAngles = new Vector3(angle / 2.0f, angle, 0);
+        angle += velocity * Time.deltaTime;
+    }
 }
