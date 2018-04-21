@@ -8,18 +8,21 @@ public class Rotator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log("Hey there. I have been updated!");
+        Debug.Log("Hey there. I have been updated yet again!");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Touch touch = Input.GetTouch(0);
-        if (touch.phase == UnityEngine.TouchPhase.Began)
+        if (Input.touchCount > 0)
         {
-            velocity *= -1;
-        }
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == UnityEngine.TouchPhase.Began)
+            {
+                velocity *= -1;
+            }
 
-        transform.localEulerAngles = new Vector3(angle / 2.0f, angle, 0);
-        angle += velocity * Time.deltaTime;
+            transform.localEulerAngles = new Vector3(angle / 2.0f, angle, 0);
+            angle += velocity * Time.deltaTime;
+        }
 	}
 }
