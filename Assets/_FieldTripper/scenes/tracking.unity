@@ -502,7 +502,7 @@ MonoBehaviour:
   m_camera: {fileID: 10}
   startAlignment: 0
   planeDetection: 0
-  detectionImages: {fileID: 11400000, guid: 99f631f78c5d14f8cb9cc4e02da07eee, type: 2}
+  detectionImages: {fileID: 11400000, guid: 624ac0cf4fa078e479f954c4995aa4bd, type: 2}
   getPointCloud: 1
   enableLightEstimation: 1
   enableAutoFocus: 1

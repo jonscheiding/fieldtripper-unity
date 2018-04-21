@@ -16,6 +16,7 @@ namespace Assets._FieldTripper
 
         private void Start()
         {
+            Logging.LogMessage("starryTracker Start()");
             if (anchorObject == null)
             {
                 Logging.LogError("Anchor object cannot be null.", true);
@@ -25,6 +26,7 @@ namespace Assets._FieldTripper
             UnityARSessionNativeInterface.ARImageAnchorAddedEvent += ImageAnchorAddedEvent;
             UnityARSessionNativeInterface.ARImageAnchorUpdatedEvent += ImageAnchorUpdatedEvent;
             UnityARSessionNativeInterface.ARImageAnchorRemovedEvent += ImageAnchorRemovedEvent;
+            Logging.LogMessage("starryTracker Start() end");
         }
 
         private void ImageAnchorAddedEvent(ARImageAnchor anchorData)
