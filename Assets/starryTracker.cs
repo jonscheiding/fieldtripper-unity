@@ -46,12 +46,14 @@ namespace Assets._FieldTripper
         {
             anchorObject.transform.position = UnityARMatrixOps.GetPosition(anchorData.transform);
             anchorObject.transform.rotation = UnityARMatrixOps.GetRotation(anchorData.transform);
+            Vector3 newPosition = anchorObject.transform.position;
+            Logging.LogMessage($"Anchor moved to ({newPosition.x.ToString("n2")}, {newPosition.y.ToString("n2")}, {newPosition.z.ToString("n2")})");
         }
 
         private void ImageAnchorRemovedEvent(ARImageAnchor anchorData)
         {
             Logging.LogMessage("image anchor removed");
-            anchorObject.SetActive(true);
+            anchorObject.SetActive(false);
         }
 
         private void Update()
