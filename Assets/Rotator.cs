@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotator : MonoBehaviour {
+public class Rotator : MonoBehaviour
+{
     private float angle = 0;
     private float velocity = 40.0f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         Debug.Log("Hey there. I have been updated yet again!");
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         foreach (Touch touch in Input.touches)
         {
             if (touch.phase == UnityEngine.TouchPhase.Began)
