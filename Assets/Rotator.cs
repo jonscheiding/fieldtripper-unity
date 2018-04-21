@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour {
     private float angle = 0;
-    private float velocity = 30.0f;
+    private float velocity = 40.0f;
 
 	// Use this for initialization
 	void Start () {
