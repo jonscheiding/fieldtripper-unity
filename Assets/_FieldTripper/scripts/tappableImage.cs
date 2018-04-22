@@ -12,24 +12,42 @@ namespace Assets._FieldTripper.scripts
         [SerializeField]
         protected ImageTracker imageTracker;
 
-        private void Update()
+		private void Start()
+		{
+			if (imageTracker == null)
+			{
+				Logging.LogMessage(String.Format("imageTracker null on {0}", name), "fttappablestart");
+			}
+			else
+			{
+				Logging.LogMessage(String.Format("imageTracker not null on {0}", name), "fttappablestart");
+			}
+		}
+
+		private void Update()
         {
             foreach (Touch touch in Input.touches)
             {
-				Logging.LogMessage("Tap1");
                 if (touch.phase == TouchPhase.Ended)
                 {
-				Logging.LogMessage("Tap2");
                     Ray ray = Camera.main.ScreenPointToRay(touch.position);
                     RaycastHit hit;
-				Logging.LogMessage("Tap3");
                     if (Physics.Raycast(ray, out hit) == true)
                     {
-				Logging.LogMessage("Tap4");
-                        MessageKit<string>.post((int)Messages.tapped, imageTracker.Id);
-				Logging.LogMessage("Tap5");
+						Logging.LogMessage(String.Format("imageTracker null on {0}", name));
+
 						OnTapped();
-				Logging.LogMessage("Tap6");
+
+						if (imageTracker == null)
+						{
+							Logging.LogMessage(String.Format("imageTracker null on {0}", name), "fttappableupdate");
+						}
+						else
+						{
+							Logging.LogMessage(String.Format("imageTracker not null on {0}", name), "fttappableupdate");
+						}
+
+						MessageKit<string>.post((int)Messages.tapped, imageTracker.Id);
 					}
 				}
             }
