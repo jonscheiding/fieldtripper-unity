@@ -16,11 +16,11 @@ namespace Assets._FieldTripper.scripts
 		{
 			if (imageTracker == null)
 			{
-				Logging.LogMessage(String.Format("imageTracker null on {0}", name), "fttappablestart");
+				Logging.LogMessage(String.Format("imageTracker null on {0}", name), "tappablestart");
 			}
 			else
 			{
-				Logging.LogMessage(String.Format("imageTracker not null on {0}", name), "fttappablestart");
+				Logging.LogMessage(String.Format("imageTracker not null on {0}", name), "tappablestart");
 			}
 		}
 
@@ -40,11 +40,11 @@ namespace Assets._FieldTripper.scripts
 
 						if (imageTracker == null)
 						{
-							Logging.LogMessage(String.Format("imageTracker null on {0}", name), "fttappableupdate");
+							Logging.LogMessage(String.Format("imageTracker null on {0}", name), "tappableupdate");
 						}
 						else
 						{
-							Logging.LogMessage(String.Format("imageTracker not null on {0}", name), "fttappableupdate");
+							Logging.LogMessage(String.Format("imageTracker not null on {0}", name), "tappableupdate");
 						}
 
 						MessageKit<string>.post((int)Messages.tapped, imageTracker.Id);
