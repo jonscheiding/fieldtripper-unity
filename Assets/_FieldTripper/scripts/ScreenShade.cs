@@ -42,7 +42,7 @@ namespace Assets._FieldTripper.scripts
 
 		private void DoLower(float duration = 1.0f)
 		{
-			ShadeImage.rectTransform.DOAnchorPos(new Vector2(0.0f, -Screen.height), 1.0f);
+			ShadeImage.rectTransform.DOAnchorPos(new Vector2(0.0f, -Screen.height), duration);
 		}
 
 	}
