@@ -59,9 +59,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_FieldTripper\scripts\imageTracker.cs" />
     <Compile Include="Assets\_FieldTripper\scripts\logging.cs" />
-    <Compile Include="Assets\Rotator.cs" />
-    <Compile Include="Assets\starryTracker.cs" />
+    <Compile Include="Assets\_FieldTripper\scripts\messages.cs" />
+    <Compile Include="Assets\_FieldTripper\scripts\Rotator.cs" />
+    <Compile Include="Assets\_FieldTripper\scripts\sequenceManager.cs" />
+    <Compile Include="Assets\_FieldTripper\scripts\tappableImage.cs" />
+    <Compile Include="Assets\MessageKit\LocatorKit.cs" />
+    <Compile Include="Assets\MessageKit\MessageKit.cs" />
+    <Compile Include="Assets\MessageKit\MessageKitLite.cs" />
     <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
     <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitRemoteConnection.cs" />
     <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ConnectionMessageIds.cs" />

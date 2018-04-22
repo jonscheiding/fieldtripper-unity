@@ -14,3 +14,7 @@ MonoBehaviour:
   resourceGroupName: ARImages
   referenceImages:
   - {fileID: 11400000, guid: 746ae8725a9431a4d9bb919a48523fec, type: 2}
+  - {fileID: 11400000, guid: 7865f184ab40919408d1e296d59cd966, type: 2}
+  - {fileID: 11400000, guid: b2397793769f93245a9ec941b1042a37, type: 2}
+  - {fileID: 11400000, guid: 6757f22c9883d4a478cf1cfd5df4d807, type: 2}
+  - {fileID: 11400000, guid: 91a839f365223764c8b1880e2b772464, type: 2}
