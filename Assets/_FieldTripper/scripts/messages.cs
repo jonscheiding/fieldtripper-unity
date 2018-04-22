@@ -9,6 +9,8 @@ namespace Assets._FieldTripper.scripts
     {
         tapped,
         correctSequence,
-        incorrectSequence
-    }
+        incorrectSequence,
+		raiseShade,
+		lowerShade
+	}
 }

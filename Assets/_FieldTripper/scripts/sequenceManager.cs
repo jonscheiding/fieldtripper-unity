@@ -19,7 +19,12 @@ namespace Assets._FieldTripper.scripts
             MessageKit<string>.addObserver((int)Messages.tapped, ImageTapped);
         }
 
-        private void ImageTapped(String id)
+		private void OnDestroy()
+		{
+            MessageKit<string>.removeObserver((int)Messages.tapped, ImageTapped);
+		}
+
+		private void ImageTapped(String id)
         {
             sequence.Add(id);
 

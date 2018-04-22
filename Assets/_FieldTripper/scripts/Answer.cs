@@ -9,12 +9,21 @@ namespace Assets._FieldTripper.scripts
 {
 	public class Answer : TappableImage
 	{
-		protected void Flash(Color color)
+		protected Tweener Flash(Color color)
 		{
+			Tweener tweener = null;
+
 			if (imageTracker != null && imageTracker.ReferenceMaterial != null)
 			{
-				imageTracker.ReferenceMaterial.DOColor(color, 0.5f).SetLoops(2);
+				tweener = imageTracker.ReferenceMaterial.DOColor(color, 0.5f).SetLoops(2);
 			}
+
+			return tweener;
+		}
+
+		protected void Flip(Texture2D newTexture)
+		{
+			
 		}
 	}
 }

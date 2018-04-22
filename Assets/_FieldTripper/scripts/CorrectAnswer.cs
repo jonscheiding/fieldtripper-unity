@@ -1,4 +1,5 @@
-﻿using Prime31.MessageKit;
+﻿using DG.Tweening;
+using Prime31.MessageKit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,21 @@ namespace Assets._FieldTripper.scripts
 
 			base.OnTapped();
 
-			Flash(Color.green);
+			Tweener tweener = Flash(Color.green);
+
+			if (tweener != null)
+			{
+				Logging.LogMessage("Tweener not null");
+				tweener.OnComplete(() =>
+				{
+					Logging.LogMessage("Triggering shade");
+					MessageKit.LogObservers((int)Messages.raiseShade);
+				});
+			}
+			else
+			{
+				Logging.LogMessage("Tweener null");
+			}
 		}
 	}
 }
