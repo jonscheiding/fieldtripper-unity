@@ -10,16 +10,24 @@ namespace Assets._FieldTripper.scripts
     {
         public static void LogMessage(string message)
         {
-            Debug.Log(message);
+            string formatted = format(message);
+            Debug.Log(formatted);
+        }
+
+        private static string format(string message)
+        {
+            string formatted = string.Format("FTLog: {0}", message);
+            return formatted;
         }
 
         public static void LogError(string error, bool throwException = false)
         {
-            Debug.Log(error);
+            string formatted = format(error);
+            Debug.Log(formatted);
 
             if (throwException == true)
             {
-                throw new Exception(error);
+                throw new Exception(formatted);
             }
         }
     }

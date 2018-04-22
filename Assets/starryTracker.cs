@@ -45,6 +45,7 @@ namespace Assets._FieldTripper
 
         private void updateAnchorObject(ARImageAnchor anchorData)
         {
+            Logging.LogMessage("updateAnchorObject()");
             anchorObject.transform.position = UnityARMatrixOps.GetPosition(anchorData.transform);
             anchorObject.transform.rotation = UnityARMatrixOps.GetRotation(anchorData.transform);
             Vector3 newPosition = anchorObject.transform.position;
