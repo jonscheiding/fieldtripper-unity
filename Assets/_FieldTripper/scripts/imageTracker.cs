@@ -42,7 +42,7 @@ namespace Assets._FieldTripper
 			Logging.LogMessage("ImageTracker Start()");
             if (anchorObject == null)
             {
-                Logging.LogError("Anchor object cannot be null.", true);
+                Logging.LogError("Anchor object cannot be null.", null, true);
             }
 
             anchorObject.SetActive(false);
