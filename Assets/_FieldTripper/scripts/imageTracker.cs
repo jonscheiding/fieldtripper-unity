@@ -6,7 +6,7 @@ using UnityEngine.XR.iOS;
 
 namespace Assets._FieldTripper
 {
-    public class imageTracker : MonoBehaviour
+    public class ImageTracker : MonoBehaviour
     {
         [SerializeField]
         private string id;
@@ -14,8 +14,11 @@ namespace Assets._FieldTripper
         [SerializeField]
         private ARReferenceImage referenceImage;
 
+		[SerializeField]
+		protected Texture originalTexture;
+
         [SerializeField]
-        private GameObject anchorObject;
+        protected GameObject anchorObject;
 
         private Vector3 offset;
 
@@ -24,9 +27,18 @@ namespace Assets._FieldTripper
             get { return id; }
         }
 
-        private void Start()
+		public ARReferenceImage ReferenceImage
+		{
+			get { return ReferenceImage; }
+		}
+
+		public Material ReferenceMaterial
+		{
+			get { return anchorObject.GetComponent<Renderer>().material; }
+		}
+
+		private void Start()
         {
-            Logging.LogMessage("starryTracker Start()");
             if (anchorObject == null)
             {
                 Logging.LogError("Anchor object cannot be null.", true);
@@ -37,10 +49,6 @@ namespace Assets._FieldTripper
             UnityARSessionNativeInterface.ARImageAnchorUpdatedEvent += ImageAnchorUpdatedEvent;
             UnityARSessionNativeInterface.ARImageAnchorRemovedEvent += ImageAnchorRemovedEvent;
             UnityARSessionNativeInterface.ARSessionTrackingChangedEvent += TrackingChangedEvent;
-
-
-            Logging.LogMessage("starryTracker Start() end");
-           
         }
 
         private void TrackingChangedEvent(UnityARCamera camera)

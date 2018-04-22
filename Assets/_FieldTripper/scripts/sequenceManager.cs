@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets._FieldTripper.scripts
 {
-    public class sequenceManager : MonoBehaviour
+    public class SequenceManager : MonoBehaviour
     {
         private List<string> sequence = new List<string>();
 
@@ -16,7 +16,7 @@ namespace Assets._FieldTripper.scripts
 
         private void Start()
         {
-            MessageKit<string>.addObserver((int)messages.tapped, ImageTapped);
+            MessageKit<string>.addObserver((int)Messages.tapped, ImageTapped);
         }
 
         private void ImageTapped(String id)
@@ -30,7 +30,7 @@ namespace Assets._FieldTripper.scripts
 
             if (sequence.Equals(answer) == true)
             {
-                MessageKit<string>.post((int)messages.correctSequence, id);
+                MessageKit<string>.post((int)Messages.correctSequence, id);
             }
         }
     }

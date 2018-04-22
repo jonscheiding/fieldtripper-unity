@@ -7,10 +7,10 @@ using UnityEngine;
 
 namespace Assets._FieldTripper.scripts
 {
-    public class tappableImage : MonoBehaviour
+    public class TappableImage : MonoBehaviour
     {
         [SerializeField]
-        private imageTracker imageTracker;
+        protected ImageTracker imageTracker;
 
         private void Update()
         {
@@ -22,10 +22,16 @@ namespace Assets._FieldTripper.scripts
                     RaycastHit hit;
                     if (Physics.Raycast(ray, out hit) == true)
                     {
-                        MessageKit<string>.post((int)messages.tapped, imageTracker.Id);
+                        MessageKit<string>.post((int)Messages.tapped, imageTracker.Id);
+						OnTapped();
                     }
                 }
             }
         }
-    }
+
+		protected virtual void OnTapped()
+		{
+			Logging.LogMessage("OnTapped()");
+		}
+	}
 }

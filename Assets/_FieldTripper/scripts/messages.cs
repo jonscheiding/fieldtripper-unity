@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Assets._FieldTripper.scripts
 {
-    public enum messages
+    public enum Messages
     {
         tapped,
         correctSequence,
