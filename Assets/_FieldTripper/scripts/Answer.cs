@@ -13,9 +13,9 @@ namespace Assets._FieldTripper.scripts
 		{
 			Tweener tweener = null;
 
-			if (imageTracker != null && imageTracker.ReferenceMaterial != null)
+			if (MyTrackedImage != null && MyTrackedImage.ReferenceMaterial != null)
 			{
-				tweener = imageTracker.ReferenceMaterial.DOColor(color, 0.5f).SetLoops(2);
+				tweener = MyTrackedImage.ReferenceMaterial.DOColor(color, 0.5f).SetLoops(2);
 			}
 
 			return tweener;

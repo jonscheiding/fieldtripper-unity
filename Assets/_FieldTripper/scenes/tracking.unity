@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6fcc5d334d3184cb7522fb497d721e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageTracker: {fileID: 805585567}
+  MyTrackedImage: {fileID: 805585567}
 --- !u!65 &191854204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6fcc5d334d3184cb7522fb497d721e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageTracker: {fileID: 805585567}
+  MyTrackedImage: {fileID: 805585567}
 --- !u!65 &507063186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671aefd51f9eb35499f23d7b4ac15375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageTracker: {fileID: 805585567}
+  MyTrackedImage: {fileID: 0}
   newTexture: {fileID: 2800000, guid: 7045aaabbc8fcc145b37ec314444b029, type: 3}
 --- !u!1 &805585566
 GameObject:
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b5cf125fa1e38419af1755a9cc7842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageTracker: {fileID: 805585567}
+  MyTrackedImage: {fileID: 805585567}
 --- !u!65 &848692167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1222,7 +1222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6fcc5d334d3184cb7522fb497d721e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageTracker: {fileID: 805585567}
+  MyTrackedImage: {fileID: 805585567}
 --- !u!65 &1990187406
 BoxCollider:
   m_ObjectHideFlags: 0

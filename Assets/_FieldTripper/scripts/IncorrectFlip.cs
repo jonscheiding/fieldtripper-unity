@@ -20,7 +20,7 @@ namespace Assets._FieldTripper.scripts
 			base.OnTapped();
 
 			Logging.LogMessage("Flipping");
-			imageTracker.ReferenceImage.imageTexture = newTexture;
+			MyTrackedImage.ReferenceImage.imageTexture = newTexture;
 			Logging.LogMessage("Flipped");
 		}
 	}

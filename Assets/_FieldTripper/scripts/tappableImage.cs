@@ -10,17 +10,17 @@ namespace Assets._FieldTripper.scripts
     public class TappableImage : MonoBehaviour
     {
         [SerializeField]
-        protected ImageTracker imageTracker;
+        protected ImageTracker MyTrackedImage;
 
 		private void Start()
 		{
-			if (imageTracker == null)
+			if (MyTrackedImage == null)
 			{
-				Logging.LogMessage(String.Format("imageTracker null on {0}", name), "tappablestart");
+				Logging.LogMessage(String.Format("MyTrackedImage null on {0}", name), "tappablestart");
 			}
 			else
 			{
-				Logging.LogMessage(String.Format("imageTracker not null on {0}", name), "tappablestart");
+				Logging.LogMessage(String.Format("MyTrackedImage not null on {0}", name), "tappablestart");
 			}
 		}
 
@@ -34,20 +34,17 @@ namespace Assets._FieldTripper.scripts
                     RaycastHit hit;
                     if (Physics.Raycast(ray, out hit) == true)
                     {
-						Logging.LogMessage(String.Format("imageTracker null on {0}", name));
-
-						OnTapped();
-
-						if (imageTracker == null)
+						if (MyTrackedImage == null)
 						{
-							Logging.LogMessage(String.Format("imageTracker null on {0}", name), "tappableupdate");
+							Logging.LogMessage(String.Format("imageTracker null on {0}", name), "MyTrackedImage");
 						}
 						else
 						{
-							Logging.LogMessage(String.Format("imageTracker not null on {0}", name), "tappableupdate");
+							Logging.LogMessage(String.Format("imageTracker not null on {0}", name), "MyTrackedImage");
+							OnTapped();
 						}
 
-						MessageKit<string>.post((int)Messages.tapped, imageTracker.Id);
+						MessageKit<string>.post((int)Messages.tapped, MyTrackedImage.Id);
 					}
 				}
             }
