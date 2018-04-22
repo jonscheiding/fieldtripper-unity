@@ -3,3 +3,5 @@ Temp
 Library
 .vs
 *.csproj
+!Assets\Demigiant\DOTween\DOTween.dll
+!Assets\Demigiant\DOTween\Editor\DOTweenEditor.dll
