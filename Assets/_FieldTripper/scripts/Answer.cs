@@ -11,7 +11,10 @@ namespace Assets._FieldTripper.scripts
 	{
 		protected void Flash(Color color)
 		{
-			imageTracker.ReferenceMaterial.DOColor(color, 0.5f).SetLoops(2);
+			if (imageTracker != null && imageTracker.ReferenceMaterial != null)
+			{
+				imageTracker.ReferenceMaterial.DOColor(color, 0.5f).SetLoops(2);
+			}
 		}
 	}
 }
