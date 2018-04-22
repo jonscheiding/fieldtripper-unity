@@ -27,6 +27,7 @@ namespace Assets._FieldTripper
             UnityARSessionNativeInterface.ARImageAnchorUpdatedEvent += ImageAnchorUpdatedEvent;
             UnityARSessionNativeInterface.ARImageAnchorRemovedEvent += ImageAnchorRemovedEvent;
             Logging.LogMessage("starryTracker Start() end");
+           
         }
 
         private void ImageAnchorAddedEvent(ARImageAnchor anchorData)
@@ -47,7 +48,7 @@ namespace Assets._FieldTripper
             anchorObject.transform.position = UnityARMatrixOps.GetPosition(anchorData.transform);
             anchorObject.transform.rotation = UnityARMatrixOps.GetRotation(anchorData.transform);
             Vector3 newPosition = anchorObject.transform.position;
-            Logging.LogMessage($"Anchor moved to ({newPosition.x.ToString("n2")}, {newPosition.y.ToString("n2")}, {newPosition.z.ToString("n2")})");
+            Logging.LogMessage(string.Format("Anchor moved to ({0}, {1}, {2})", newPosition.x.ToString("n2"), newPosition.y.ToString("n2"), newPosition.z.ToString("n2")));
         }
 
         private void ImageAnchorRemovedEvent(ARImageAnchor anchorData)
